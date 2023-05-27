@@ -456,7 +456,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-     buttons = [[
+  buttons = [[
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('📡 ʜᴇʟᴘ 📡', callback_data='help'),
@@ -469,7 +469,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ᴛʜᴇ ᴍᴇɴᴜ ❌', callback_data='close_data')
         ]]
-       reply_markup = InlineKeyboardMarkup(buttons)
+        reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
@@ -477,6 +477,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
         await query.answer('Piracy Is Crime')
+        
     elif query.data == "help":
           buttons = [[
             InlineKeyboardButton('Connect', callback_data='coct'),
